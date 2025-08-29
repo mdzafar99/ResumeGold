@@ -1,11 +1,8 @@
 # ResumeGold 💼✨  
 
-![Image](https://github.com/user-attachments/assets/d9b90a98-bc50-4e29-bdb2-f8f801ee7d9b)
-![Image](https://github.com/user-attachments/assets/5f098ce7-b1ca-4ef0-a592-9c0fa53a34ea)
-![Image](https://github.com/user-attachments/assets/e28093f8-2a7a-4245-95be-d64a5c7a6d61)
-![Image](https://github.com/user-attachments/assets/c30ec123-dc45-43f1-b376-d2894ca325b3)
-![Image](https://github.com/user-attachments/assets/415098da-167a-4e18-ba93-af751f4efcef)
-![Image](https://github.com/user-attachments/assets/81b6ea18-161a-45dc-b1b4-557c2c573000)
+![Image](https://github.com/user-attachments/assets/02ae6cb1-66ca-4658-a014-2239e57ea7b1)
+
+![Image](https://github.com/user-attachments/assets/0053d775-3067-47db-ac10-89eaca37f8e4))
 
 
 A professional and fully functional **Resume Builder Website** built using **HTML, CSS, and JavaScript**.  
