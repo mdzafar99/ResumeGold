@@ -29,4 +29,4 @@ Easily create, preview, and download a **ready-to-use PDF resume** — all in th
 ---
 
 ## 📷 Demo
-🔗 [Live Demo](https://your-deployed-link.com)  
+🔗 [Live Demo](https://mdzafar99.github.io/ResumeGold/)  
