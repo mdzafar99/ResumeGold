@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeGold - Professional Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <h1 class="splash-title">ResumeGold</h1>
+            <div class="splash-loader">
+                <div class="loader-dot"></div>
+                <div class="loader-dot"></div>
+                <div class="loader-dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>ResumeGold</h1>
+                </div>
+                <nav class="nav">
+                    <button id="download-pdf" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main">
+            <div class="container">
+                <div class="content-grid">
+                    <!-- Form Section -->
+                    <div class="form-section">
+                        <div class="form-container">
+                            <h2>Build Your Resume</h2>
+                            
+                            <!-- Personal Information -->
+                            <div class="form-group">
+                                <h3><i class="fas fa-user"></i> Personal Information</h3>
+                                <div class="input-grid">
+                                    <input type="text" id="fullName" placeholder="Full Name" required>
+                                    <input type="email" id="email" placeholder="Email Address" required>
+                                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                                    <input type="text" id="location" placeholder="City, State">
+                                    <input type="url" id="website" placeholder="Website/Portfolio (Optional)">
+                                    <input type="url" id="linkedin" placeholder="LinkedIn Profile (Optional)">
+                                </div>
+                            </div>
+
+                            <!-- Professional Summary -->
+                            <div class="form-group">
+                                <h3><i class="fas fa-file-text"></i> Professional Summary</h3>
+                                <textarea id="summary" placeholder="Write a brief professional summary (2-3 sentences)" rows="4"></textarea>
+                            </div>
+
+                            <!-- Work Experience -->
+                            <div class="form-group">
+                                <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                                <div id="experience-container">
+                                    <div class="experience-item">
+                                        <input type="text" class="job-title" placeholder="Job Title">
+                                        <input type="text" class="company" placeholder="Company Name">
+                                        <div class="date-range">
+                                            <input type="text" class="start-date" placeholder="Start Date (e.g., Jan 2020)">
+                                            <input type="text" class="end-date" placeholder="End Date (or 'Present')">
+                                        </div>
+                                        <textarea class="job-description" placeholder="Describe your responsibilities and achievements" rows="3"></textarea>
+                                        <button type="button" class="btn-remove" onclick="removeExperience(this)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button type="button" id="add-experience" class="btn btn-secondary">
+                                    <i class="fas fa-plus"></i> Add Experience
+                                </button>
+                            </div>
+
+                            <!-- Education -->
+                            <div class="form-group">
+                                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                                <div id="education-container">
+                                    <div class="education-item">
+                                        <input type="text" class="degree" placeholder="Degree">
+                                        <input type="text" class="institution" placeholder="Institution">
+                                        <div class="date-range">
+                                            <input type="text" class="edu-start-date" placeholder="Start Year">
+                                            <input type="text" class="edu-end-date" placeholder="End Year">
+                                        </div>
+                                        <input type="text" class="gpa" placeholder="GPA (Optional)">
+                                        <button type="button" class="btn-remove" onclick="removeEducation(this)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button type="button" id="add-education" class="btn btn-secondary">
+                                    <i class="fas fa-plus"></i> Add Education
+                                </button>
+                            </div>
+
+                            <!-- Skills -->
+                            <div class="form-group">
+                                <h3><i class="fas fa-cogs"></i> Skills</h3>
+                                <textarea id="skills" placeholder="Enter your skills separated by commas (e.g., JavaScript, Python, Project Management)" rows="3"></textarea>
+                            </div>
+
+                            <!-- Projects -->
+                            <div class="form-group">
+                                <h3><i class="fas fa-project-diagram"></i> Projects</h3>
+                                <div id="projects-container">
+                                    <div class="project-item">
+                                        <input type="text" class="project-name" placeholder="Project Name">
+                                        <input type="url" class="project-url" placeholder="Project URL (Optional)">
+                                        <textarea class="project-description" placeholder="Describe the project and technologies used" rows="2"></textarea>
+                                        <button type="button" class="btn-remove" onclick="removeProject(this)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button type="button" id="add-project" class="btn btn-secondary">
+                                    <i class="fas fa-plus"></i> Add Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Preview Section -->
+                    <div class="preview-section">
+                        <div class="preview-container">
+                            <h2>Live Preview</h2>
+                            <div id="resume-preview" class="resume-preview">
+                                <!-- Resume content will be generated here -->
+                                <div class="resume-header">
+                                    <h1 class="resume-name">Your Name</h1>
+                                    <div class="resume-contact">
+                                        <span class="contact-item">email@example.com</span>
+                                        <span class="contact-item">Phone Number</span>
+                                        <span class="contact-item">City, State</span>
+                                    </div>
+                                </div>
+
+                                <div class="resume-section">
+                                    <h2>Professional Summary</h2>
+                                    <p class="summary-text">Your professional summary will appear here...</p>
+                                </div>
+
+                                <div class="resume-section">
+                                    <h2>Work Experience</h2>
+                                    <div class="experience-list">
+                                        <p class="placeholder-text">Your work experience will appear here...</p>
+                                    </div>
+                                </div>
+
+                                <div class="resume-section">
+                                    <h2>Education</h2>
+                                    <div class="education-list">
+                                        <p class="placeholder-text">Your education will appear here...</p>
+                                    </div>
+                                </div>
+
+                                <div class="resume-section">
+                                    <h2>Skills</h2>
+                                    <div class="skills-list">
+                                        <p class="placeholder-text">Your skills will appear here...</p>
+                                    </div>
+                                </div>
+
+                                <div class="resume-section">
+                                    <h2>Projects</h2>
+                                    <div class="projects-list">
+                                        <p class="placeholder-text">Your projects will appear here...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>© 2025 ResumeGold</p>
+                <p>Made with ❤️ by MD ZAFAR</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
