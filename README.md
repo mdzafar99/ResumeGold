@@ -2,7 +2,7 @@
 
 ![Image](https://github.com/user-attachments/assets/02ae6cb1-66ca-4658-a014-2239e57ea7b1)
 
-![Image](https://github.com/user-attachments/assets/0053d775-3067-47db-ac10-89eaca37f8e4))
+![Image](https://github.com/user-attachments/assets/0053d775-3067-47db-ac10-89eaca37f8e4)
 
 
 A professional and fully functional **Resume Builder Website** built using **HTML, CSS, and JavaScript**.  
